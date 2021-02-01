@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image.png" href="image/mimo.png">
+    <title>Login page</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--First part-->
+        <!-- we use id only for javascript (id is unique indicator)
+             for good practice use class (bem method : http://getbem.com/)
+        -->
+        <!-- <img id="brain" src="image/Brain.png"> -->
+        <!-- <img class="brain" src="image/Brain.png">
+        <!-- for styling logo we will grouped elements (img and title) -->
+        <!-- <h3>MASTERMIND <span>MAEDTRO</span></h3> -->
+        <!-- we don't use h3 for styling anything is not title  -->
+        <div class="logo">
+            <img id="brain" src="image/Brain.png">
+            <span class="logo-name">
+                <span class="logo--primary-color">
+                    MASTERMIND
+                </span>
+                <span class="logo--secondary-color">
+                    MAEDTRO
+                </span>
+            </span>
+        </div>
+        <p>Create an account</p>
+        <button>Sign-up with Facebook</button>
+        <!-- for good code don't use the --OR-- , we will styling the dash using pseudo elements in css  -->
+        <!-- p for text and paragraph in this case we use div or span(span ==> display :inline ) -->
+        <!-- <p id="option">--OR--</p> -->
+        <span class="option">or</span>
+
+        <!--Second part-->
+        <!-- NOTE : when we have a inputs , we will use form for grouped elements -->
+        <!-- <input type="email" placeholder="Email">
+        <input type="password" placeholder="password"> -->
+        <!-- in form , best code we use the input type="submit" instead button -->
+        <!-- <button type="submit">Get Started</button> -->
+        <!-- <input type="submit" value="Get Started"> -->
+        <form action="#" method="GET">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="password">
+            <input type="submit" value="Get Started">
+        </form>
+        <!-- we don't use h4 for styling anything is not title  -->
+        <!-- <h4>Already have an account?<a href="#">Log in</a></h4> -->
+        <span>Already have an account?<a href="#">Log in</a></span>
+    </div>
+    <div class="exp">
+        <!-- in this case we not need a img (background-image) -->
+        <!-- <img src="image/code.jpg"> -->
+        <!-- in this case we will use this case -->
+        <!-- NOTE : don't use id .. replace id by class -->
+        <h3 class="exp__title">Mastermind Better Succeed Together</h3>
+        <p class="exp__para">
+            Get meaningful results with essential tools for brainstorming.goal setting and
+            accountability
+        </p>
+    </div>
+</body>
+
+</html>

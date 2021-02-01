@@ -1,119 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* in this case you choose only light weight but in paragraph you need regular weight !!! */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
 body {
-    background:-moz-linear-gradient(to bottom,rgb(9, 205, 231),rgb(0, 68, 255));
-    background-repeat: no-repeat;
-    margin-bottom: 40%;
+  /* check this link for know support browsers specify properties :https://caniuse.com/?search=linear-gradient() */
+  background: linear-gradient(
+    to bottom right,
+    rgb(9, 205, 231),
+    rgb(0, 68, 255)
+  );
+  background-repeat: no-repeat;
+  margin-bottom: 40%;
+  /* here you have to add font and font-weight also font-size and color because many of elements accept inheritance properties : read this article :https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance */
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
 }
 .container {
-    border: none;
-    margin: 75px 650px 0 260px;
-    padding:1% 0 8px 0;
-    background-color: white;
-    transform: translateX(-230px);
-    position: relative;
-    bottom: 50px;
+  border: none;
+  margin: 75px 650px 0 260px;
+  padding: 1% 0 8px 0;
+  background-color: white;
+  transform: translateX(-230px);
+  position: relative;
+  bottom: 50px;
 }
-#brain { 
-    transform: translateX(190px);
+.brain {
+  transform: translateX(190px);
 }
 h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(23, 199, 199);
-    text-align: center;
-    transform: translateX(-10px);
+  font-family: "Montserrat", sans-serif;
+  color: rgb(23, 199, 199);
+  text-align: center;
+  transform: translateX(-10px);
 }
 h3 span {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    color: rgb(7, 121, 121);
-    letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  color: rgb(7, 121, 121);
+  letter-spacing: 1px;
 }
 p {
-    text-align: center;
-    font-family: 'Montserrat',sans-serif;
-    color: rgb(139, 136, 136);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(139, 136, 136);
 }
 button {
-    margin: 40px 0 0 110px;
-    border: none;
-    background-color: #4267B2;
-    padding: 10px 33px 10px 33px;
-    color: white;
-    cursor: pointer;
-    background-image: url(image/facebook.png);
-    background-repeat: no-repeat;
-    background-position: left;
+  margin: 40px 0 0 110px;
+  border: none;
+  background-color: #4267b2;
+  padding: 10px 33px 10px 33px;
+  color: white;
+  cursor: pointer;
+  background-image: url(image/facebook.png);
+  background-repeat: no-repeat;
+  background-position: left;
 }
-#option { 
-    padding-top: 15px;
-    font-size: small;
+#option {
+  padding-top: 15px;
+  font-size: small;
 }
-input[type='email'] {
-    border: none;
-    outline: none;
-    border-bottom: 1px solid grey;
-    margin: 30px 0 0 100px;
-    padding: 5px 0 5px 2px;
+input[type="email"] {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  margin: 30px 0 0 100px;
+  padding: 5px 0 5px 2px;
 }
-input[type='password'] {
-    border: none;
-    outline: none;
-    border-bottom: 1px solid grey;
-    margin: 30px 0 0 100px;
-    padding: 5px 0 5px 2px;
+input[type="password"] {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  margin: 30px 0 0 100px;
+  padding: 5px 0 5px 2px;
 }
-button[type='submit'] {
-    background-color: rgb(0, 140, 255);
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: none;
-    padding: 10px 68px 10px 70px;
-    margin: 40px 0 0 106px;
+button[type="submit"] {
+  background-color: rgb(0, 140, 255);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: none;
+  padding: 10px 68px 10px 70px;
+  margin: 40px 0 0 106px;
 }
 h5 {
-    text-align: center;
-    color: grey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a {
-    text-decoration: none;
-    color: rgb(0, 140, 255);
-    padding-left: 5px;
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+  padding-left: 5px;
 }
 .exp {
-    margin-left: 457px;
-    transform: translateY(-620px);
+  margin-left: 457px;
+  transform: translateY(-620px);
 }
 #pic {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-right: 543px;
-    transform: translateY(-380px);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-right: 543px;
+  transform: translateY(-380px);
 }
 #pic_2 {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-right: 543px;
-    transform: translateY(-390px);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-right: 543px;
+  transform: translateY(-390px);
 }
 #para {
-    color: white;
-    transform: translateY(-376px);
-    padding-right:400px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  transform: translateY(-376px);
+  padding-right: 400px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #para_2 {
-    color: white;
-    transform: translateY(-386px);
-    padding-right:418px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  transform: translateY(-386px);
+  padding-right: 418px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #para_3 {
-    color: white;
-    transform: translateY(-395px);
-    padding-right:560px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  transform: translateY(-395px);
+  padding-right: 560px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
