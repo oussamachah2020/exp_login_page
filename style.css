@@ -1,119 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* in this case you choose only light weight but in paragraph you need regular weight !!! */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+/* don't forget to initial Layout of html  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    background:-moz-linear-gradient(to bottom,rgb(9, 205, 231),rgb(0, 68, 255));
-    background-repeat: no-repeat;
-    margin-bottom: 40%;
+  /* check this link for know support browsers specify properties :https://caniuse.com/?search=linear-gradient() */
+  background: linear-gradient(
+    to bottom right,
+    rgb(9, 205, 231),
+    rgb(0, 68, 255)
+  );
+  background-repeat: no-repeat;
+  /* here you have to add font and font-weight also font-size and color because many of elements accept inheritance properties : read this article :https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance */
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .container {
-    border: none;
-    margin: 75px 650px 0 260px;
-    padding:1% 0 8px 0;
-    background-color: white;
-    transform: translateX(-230px);
-    position: relative;
-    bottom: 50px;
+  /* padding: 1% 0 8px 0; */
+  background-color: white;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 60%;
+  /* for perfect code don't use transform in layout alignment */
 }
-#brain { 
-    transform: translateX(190px);
+.container__left {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 45%;
 }
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(23, 199, 199);
-    text-align: center;
-    transform: translateX(-10px);
+
+.logo {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
-h3 span {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    color: rgb(7, 121, 121);
-    letter-spacing: 1px;
+.logo-image {
+  display: block;
+  margin: 0 auto;
+  height: 55px;
+  /* transform: translateX(190px); */
+  margin-bottom: 15px;
 }
+.logo-name {
+  display: block;
+  font-family: inherit;
+}
+.logo--primary-color {
+  color: rgb(23, 199, 199);
+}
+.logo--secondary-color {
+  color: rgb(7, 121, 121);
+}
+
 p {
-    text-align: center;
-    font-family: 'Montserrat',sans-serif;
-    color: rgb(139, 136, 136);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(139, 136, 136);
 }
 button {
-    margin: 40px 0 0 110px;
-    border: none;
-    background-color: #4267B2;
-    padding: 10px 33px 10px 33px;
-    color: white;
-    cursor: pointer;
-    background-image: url(image/facebook.png);
-    background-repeat: no-repeat;
-    background-position: left;
+  width: 85%;
+  outline: none;
+  border-radius: 4px;
+  display: block;
+  margin: 15px 0;
+  border: none;
+  background-color: #4267b2;
+  padding: 10px 35px 10px 40px;
+  color: white;
+  cursor: pointer;
+  background-image: url(image/facebook.png);
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  transition: all 0.25s linear;
 }
-#option { 
-    padding-top: 15px;
-    font-size: small;
+button:hover {
+  background-color: #214b9e;
 }
-input[type='email'] {
-    border: none;
-    outline: none;
-    border-bottom: 1px solid grey;
-    margin: 30px 0 0 100px;
-    padding: 5px 0 5px 2px;
+button:active {
+  outline: 2px solid black;
+  background-color: #1c4494;
 }
-input[type='password'] {
-    border: none;
-    outline: none;
-    border-bottom: 1px solid grey;
-    margin: 30px 0 0 100px;
-    padding: 5px 0 5px 2px;
+.option {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(139, 136, 136);
+  text-transform: uppercase;
 }
-button[type='submit'] {
-    background-color: rgb(0, 140, 255);
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: none;
-    padding: 10px 68px 10px 70px;
-    margin: 40px 0 0 106px;
+.option:after,
+.option:before {
+  content: "";
+  width: 45%;
+  height: 2px;
+  background-color: rgb(139, 136, 136);
 }
-h5 {
-    text-align: center;
-    color: grey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.option:before {
+  margin-right: 10px;
+}
+.option:after {
+  margin-left: 10px;
+}
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* don't repeat code */
+input[placeholder] {
+  margin: 10px 0;
+  padding: 15px 0;
+  width: 85%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(139, 136, 136);
+}
+input[placeholder]::placeholder {
+  font-weight: bold;
+}
+input[type="submit"] {
+  cursor: pointer;
+  width: 75%;
+  border-radius: 4px;
+  background-color: rgb(0, 140, 255);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: none;
+  border: none;
+  padding: 10px 35px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: all 0.25s linear;
+}
+input[type="submit"]:hover {
+  background-color: rgb(3, 126, 226);
+}
+input[type="submit"]:active {
+  background-color: rgb(3, 126, 228);
 }
 a {
-    text-decoration: none;
-    color: rgb(0, 140, 255);
-    padding-left: 5px;
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+  padding-left: 5px;
 }
-.exp {
-    margin-left: 457px;
-    transform: translateY(-620px);
+
+.container__right {
+  flex-basis: 55%;
+  padding: 45px;
+  background-image: url("image/code.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
 }
-#pic {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-right: 543px;
-    transform: translateY(-380px);
+
+.exp__title {
+  font-size: 26px;
+  font-family: inherit;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
-#pic_2 {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-right: 543px;
-    transform: translateY(-390px);
-}
-#para {
-    color: white;
-    transform: translateY(-376px);
-    padding-right:400px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#para_2 {
-    color: white;
-    transform: translateY(-386px);
-    padding-right:418px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#para_3 {
-    color: white;
-    transform: translateY(-395px);
-    padding-right:560px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.exp__para {
+  text-align: left;
+  width: 75%;
+  color: inherit;
+  font-size: 18px;
 }
